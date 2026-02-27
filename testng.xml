@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+
+    <listeners>
+        <listener class-name="Listeners.TestListener"/>
+        <listener class-name="Listeners.Log4jSetupListener"/>
+    </listeners>
+
+    <test name="Test">
+        <classes>
+            <class name="TestCases.ATS_EndToEndTest"/>
+        </classes>
+    </test>
+
+</suite>
