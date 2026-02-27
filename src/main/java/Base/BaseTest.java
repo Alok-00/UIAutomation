@@ -1,5 +1,7 @@
 package Base;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -19,7 +21,8 @@ public void setUp()
 try
 {
 driver = new ChromeDriver(); // Launch Chrome browser
-driver.manage().window().maximize(); // Maximize browser window
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// Maximize browser window
 driver.get(ConfigReader.get("url")); // Open application URL fromconfig.properties
 LoggerUtil.info("Bowser launched and URL opened"); // Log info message
 }
